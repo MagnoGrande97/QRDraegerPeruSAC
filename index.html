@@ -55,6 +55,21 @@
         updateBannerVisibility();
       }
 
+      // Función JavaScript para compartir imagen
+    function shareImage(imageUrl) {
+        // Creamos un nuevo elemento "a" (enlace)
+        var a = document.createElement('a');
+        
+        // Establecemos la URL de la imagen a compartir como el enlace
+        a.href = imageUrl;
+        
+        // Establecemos el atributo "download" para forzar la descarga de la imagen
+        a.download = 'imagen_compartida.png';
+        
+        // Hacemos clic en el enlace para iniciar la descarga
+        a.click();
+    }
+
       var buildUrl = "Build";
       var loaderUrl = buildUrl + "/WebGLBuilds.loader.js";
       var config = {
